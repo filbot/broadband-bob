@@ -8,6 +8,9 @@ import time
 # https://pypi.python.org/pypi/twitter
 import twitter
 
+# Populate your app keys for Twitter in the userConfig.py file
+import userConfig
+
 def test():
 
         # run speedtest-cli
@@ -38,10 +41,10 @@ def test():
         out_file.close()
 
         #Twitter credentials
-        TOKEN=""
-        TOKEN_KEY=""
-        CON_SEC=""
-        CON_SEC_KEY=""
+        TOKEN = userConfig.token
+        TOKEN_KEY = userConfig.tokenKey
+        CON_SEC = userConfig.conSec
+        CON_SEC_KEY = userConfig.conSecKey
 
         my_auth = twitter.OAuth(TOKEN,TOKEN_KEY,CON_SEC,CON_SEC_KEY)
         twit = twitter.Twitter(auth=my_auth)
