@@ -57,10 +57,10 @@ def test():
         # Downstream Speed Range: 24.1 Mbps - 45 Mbps
         # Upload Speed Range: 3 Mbps - 6 Mbps
         # https://www.att.net/speedtiers
-        elif eval(d)<24:
-                print "trying to tweet"
+        elif float(d)<24.1:
+                print "Trying to tweet"
                 try:
-                        tweet="Hey, @ATT, why is my internet speed " + str(int(eval(d))) +"Mbps down when I pay for 45Mbps down? #slowinternet #poorservice #speedtest"
+                        tweet="@ATTCares, why is my download speed {0:.2}Mbps down when I pay for 45Mbps down on the U-verse Internet 45 plan? #slowinternet #speedtest".format(d)
                         twit.statuses.update(status=tweet)
                 except Exception,e:
                         print str(e)
