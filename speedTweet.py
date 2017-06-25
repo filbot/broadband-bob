@@ -46,11 +46,10 @@ def test():
         my_auth = twitter.OAuth(TOKEN,TOKEN_KEY,CON_SEC,CON_SEC_KEY)
         twit = twitter.Twitter(auth=my_auth)
 
-        #Try to tweet if speedtest couldnt even connect. Probably wont work if the internet is down
+        #Try to tweet if speedtest couldn't even connect. Probably wont work if the internet is down.
         if "Cannot" in a:
                 try:
-                        tweet="Hey why is my internet down?"
-                        twit.statuses.update(status=tweet)
+                        print("Speedtest couldn't connect")
                 except:
                         pass
 
