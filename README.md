@@ -6,4 +6,4 @@ If you're interested in seeing what the end result looks like, pop over to the [
 ![Twitter account screenshot](http://i.imgur.com/DiLPCcZ.png "Twitter account screenshot")
 
 ### Acknowledgments
-This project was inspired heavily, and by that I mean, 90% of the code used is from Reddit users [AlekseyP's](https://www.reddit.com/user/AlekseyP) own [project](https://redd.it/43fi39) where he tweets at his ISP for not providing the bandwidth that he paid for.
+This project was inspired heavily, and by that, I mean 90% of the code used is from Reddit users [AlekseyP's](https://www.reddit.com/user/AlekseyP) own [project](https://redd.it/43fi39) where he tweets at his ISP for not providing the bandwidth that he paid for.
