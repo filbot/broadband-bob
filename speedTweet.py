@@ -10,10 +10,10 @@ import twitter
 
 def test():
 
-        #run speedtest-cli
-        print 'running test'
+        # run speedtest-cli
         # https://pypi.python.org/pypi/speedtest-cli/
-        a = os.popen("speedtest-cli --simple").read()
+        print 'running test'
+        a = os.popen("/usr/local/bin/speedtest-cli --simple").read()
         print 'ran'
         #split the 3 line result (ping,down,up)
         lines = a.split('\n')
