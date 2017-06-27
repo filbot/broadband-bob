@@ -49,6 +49,9 @@ def test():
         my_auth = twitter.OAuth(TOKEN,TOKEN_KEY,CON_SEC,CON_SEC_KEY)
         twit = twitter.Twitter(auth=my_auth)
 
+        # Download speed as an integer
+        speed = int(round(d))
+
         #Try to tweet if speedtest couldn't even connect. Probably wont work if the internet is down.
         if "Cannot" in a:
                 try:
@@ -60,10 +63,10 @@ def test():
         # Downstream Speed Range: 24.1 Mbps - 45 Mbps
         # Upload Speed Range: 3 Mbps - 6 Mbps
         # https://www.att.net/speedtiers
-        elif float(d)<24.1:
+        elif speed<24:
                 print "Trying to tweet"
                 try:
-                        tweet="@ATTCares, why is my download speed {0:.2}Mbps down when I pay for 45Mbps down on the U-verse Internet 45 plan? #slowinternet #speedtest".format(d)
+                        tweet="@ATTCares, why is my internet speed {0}Mbps down when I pay for 45Mbps down on the U-verse Internet 45 plan? #slowinternet #speedtest".format(speed)
                         twit.statuses.update(status=tweet)
                 except Exception,e:
                         print str(e)
